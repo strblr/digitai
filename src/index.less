@@ -1,0 +1,35 @@
+@import '~antd/lib/style/themes/default.less';
+
+body, #root, #digitai {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#digitai {
+  padding: 50px;
+}
+
+#pad {
+  display: inline-block;
+  cursor: pointer;
+  > div {
+    display: flex;
+    > div {
+      width: 26px;
+      height: 26px;
+      background: darken(@body-background, 10%);
+      border: 1px solid @border-color-base;
+      &.active {
+        background: lighten(@body-background, 50%);
+      }
+    }
+  }
+}
+
+#result {
+  font-size: 160px;
+}
