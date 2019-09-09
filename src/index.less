@@ -9,27 +9,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#digitai {
-  padding: 50px;
-}
+#root {
+  display: flex;
+  flex-direction: column;
 
-#pad {
-  display: inline-block;
-  cursor: pointer;
-  > div {
+  > div:nth-child(1) {
+    flex-grow: 1;
     display: flex;
+
     > div {
-      width: 26px;
-      height: 26px;
-      background: darken(@body-background, 10%);
-      border: 1px solid @border-color-base;
-      &.active {
-        background: lighten(@body-background, 50%);
-      }
+      padding: 40px;
     }
   }
-}
 
-#result {
-  font-size: 160px;
+  > div:nth-child(2) {
+    flex-grow: 2;
+  }
 }

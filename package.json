@@ -5,16 +5,19 @@
   "dependencies": {
     "@ant-design/dark-theme": "^0.2.2",
     "antd": "^3.23.2",
+    "assert": "^2.0.0",
     "babel-plugin-import": "^1.12.1",
     "classnames": "^2.2.6",
     "customize-cra": "^0.6.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lodash": "^4.17.15",
+    "mathjs": "^6.2.1",
     "react": "^16.9.0",
     "react-app-rewired": "^2.1.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "vis-network": "^5.4.1"
   },
   "scripts": {
     "start": "BROWSER=none react-app-rewired start",
