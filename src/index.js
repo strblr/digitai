@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { Network } from './network'
+import { Model } from './model'
 import InputLayer from './InputLayer'
+import Info from './Info'
 import OutputLayer from './OutputLayer'
-import Graph from './Graph'
+import Network from './Network'
 import './index.less'
 
-const App = () => {
-  const [network] = useState(() => new Network([150, 16, 16, 10]))
-  return <>
-    <div>
-      <InputLayer network={network}/>
-      <OutputLayer network={network}/>
-    </div>
-    <Graph network={network}/>
-  </>
-}
+const model = new Model([150, 16, 16, 10])
+
+const App = () => <>
+  <div>
+    <InputLayer model={model}/>
+    <Info model={model}/>
+    <OutputLayer model={model}/>
+  </div>
+  <Network model={model}/>
+</>
 
 ReactDOM.render(<App/>, document.getElementById('root'))

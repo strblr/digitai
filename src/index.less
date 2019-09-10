@@ -14,15 +14,43 @@ body {
   flex-direction: column;
 
   > div:nth-child(1) {
-    flex-grow: 1;
     display: flex;
+    flex-shrink: 0;
+    height: 340px;
+    border-bottom: 1px solid @border-color-base;
 
     > div {
-      padding: 40px;
+      padding: 20px 40px;
     }
   }
 
   > div:nth-child(2) {
-    flex-grow: 2;
+    flex-grow: 1;
+  }
+}
+
+#input {
+  > #pad > div {
+    display: flex;
+    cursor: pointer;
+
+    > div {
+      height: 14px;
+      width: 14px;
+      border: 1px solid @border-color-base;
+      &:hover {
+        background: @primary-color !important;
+      }
+    }
+  }
+
+  > .ant-btn {
+    margin-top: 10px;
+  }
+}
+
+#output {
+  b {
+    font-size: 120px;
   }
 }

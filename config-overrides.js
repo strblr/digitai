@@ -11,7 +11,8 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: {
       ...darkTheme,
-      '@body-background': '#282C35'
+      '@body-background': '#282C35',
+      '@primary-color': 'rgb(43, 124, 233)'
     }
   })
 )
